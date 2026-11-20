@@ -1,0 +1,10 @@
+# Classification de descriptions de produits (projet final)
+
+Webapp Streamlit : on saisit (ou on uploade en .txt) une description de produit en anglais, et le modèle
+renvoie sa catégorie (Books, Clothing & Accessories, Electronics, Household) avec les probabilités associées.
+
+- Modèle retenu : DistilBERT fine-tuné (F1 macro test : 0,9588), chargé depuis Hugging Face
+- Modèle léger de comparaison : TF-IDF + Régression logistique (F1 macro test : 0,9567)
+- Données : E-commerce Text Classification (Zenodo / Kaggle), 27 802 textes après suppression des doublons
+
+Lancer en local : `pip install -r requirements.txt` puis `streamlit run app.py`.
